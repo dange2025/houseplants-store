@@ -45,3 +45,18 @@ export default function ProductPage() {
   return <h2>Product Page – coming soon!</h2>;
 }
 <Route path="/products" element={<ProductPage />} />
+
+import Header from "./components/Header";
+
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/cart" element={<CartPage />} />
+      </Routes>
+    </Router>
+  );
+}
