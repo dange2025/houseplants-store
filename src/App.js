@@ -44,3 +44,4 @@ export default App;
 export default function ProductPage() {
   return <h2>Product Page – coming soon!</h2>;
 }
+<Route path="/products" element={<ProductPage />} />
