@@ -23,3 +23,24 @@ function App() {
 }
 
 export default App;
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import ProductPage from "./pages/ProductPage"; // kommt später
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/products" element={<ProductPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+// src/pages/ProductPage.js
+export default function ProductPage() {
+  return <h2>Product Page – coming soon!</h2>;
+}
